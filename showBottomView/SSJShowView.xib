@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SSJShowView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8F0-J5-a1W">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Of9-vw-aHf" appends="YES" id="CUc-j8-aR7"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Af4-Nk-UoJ">
+                    <rect key="frame" x="0.0" y="400" width="600" height="200"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4k4-rS-qO4">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="170"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="170" id="7mM-MX-GN5"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y9k-mR-RcN">
+                            <rect key="frame" x="0.0" y="170" width="600" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIE-sG-DAS">
+                                    <rect key="frame" x="265" y="8" width="70" height="14"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="DVG-lC-eMA"/>
+                                    </constraints>
+                                    <state key="normal" image="ssj_icon_delete.png">
+                                        <color key="titleColor" red="0.32549019610000002" green="0.3411764706" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="cancelBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="vqN-Os-lsi"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="XIE-sG-DAS" firstAttribute="top" secondItem="Y9k-mR-RcN" secondAttribute="top" constant="8" id="6q6-yQ-dEo"/>
+                                <constraint firstItem="XIE-sG-DAS" firstAttribute="centerX" secondItem="Y9k-mR-RcN" secondAttribute="centerX" id="jck-X1-cVb"/>
+                                <constraint firstItem="XIE-sG-DAS" firstAttribute="centerY" secondItem="Y9k-mR-RcN" secondAttribute="centerY" id="wCp-bd-ZbF"/>
+                                <constraint firstAttribute="bottom" secondItem="XIE-sG-DAS" secondAttribute="bottom" constant="8" id="zX7-Dn-DmA"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Y9k-mR-RcN" firstAttribute="top" secondItem="4k4-rS-qO4" secondAttribute="bottom" id="1kV-60-9Ua"/>
+                        <constraint firstAttribute="trailing" secondItem="Y9k-mR-RcN" secondAttribute="trailing" id="ZfU-8h-3Qt"/>
+                        <constraint firstAttribute="trailing" secondItem="4k4-rS-qO4" secondAttribute="trailing" id="ZuA-S7-awp"/>
+                        <constraint firstAttribute="bottom" secondItem="Y9k-mR-RcN" secondAttribute="bottom" id="cnO-7R-5qn"/>
+                        <constraint firstItem="4k4-rS-qO4" firstAttribute="top" secondItem="Af4-Nk-UoJ" secondAttribute="top" id="dyj-PJ-Cxe"/>
+                        <constraint firstItem="Y9k-mR-RcN" firstAttribute="leading" secondItem="Af4-Nk-UoJ" secondAttribute="leading" id="e5U-o8-IcK"/>
+                        <constraint firstItem="4k4-rS-qO4" firstAttribute="leading" secondItem="Af4-Nk-UoJ" secondAttribute="leading" id="kgp-CY-HBM"/>
+                        <constraint firstAttribute="height" constant="200" id="xlC-FS-zHo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="8F0-J5-a1W" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9e8-3I-cB5"/>
+                <constraint firstAttribute="trailing" secondItem="8F0-J5-a1W" secondAttribute="trailing" id="XfE-2l-hvN"/>
+                <constraint firstItem="8F0-J5-a1W" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="beM-mu-10g"/>
+                <constraint firstAttribute="bottom" secondItem="8F0-J5-a1W" secondAttribute="bottom" id="fHh-jG-69B"/>
+                <constraint firstAttribute="trailing" secondItem="Af4-Nk-UoJ" secondAttribute="trailing" id="mWN-aW-0tJ"/>
+                <constraint firstAttribute="bottom" secondItem="Af4-Nk-UoJ" secondAttribute="bottom" id="ui0-mM-xtb"/>
+                <constraint firstItem="Af4-Nk-UoJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wPd-il-7ra"/>
+            </constraints>
+            <connections>
+                <outlet property="actionView" destination="4k4-rS-qO4" id="aup-hj-Hyk"/>
+            </connections>
+        </view>
+        <tapGestureRecognizer id="Of9-vw-aHf">
+            <connections>
+                <action selector="tapBackView:" destination="iN0-l3-epB" id="jfK-br-Lou"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="ssj_icon_delete.png" width="16" height="16"/>
+    </resources>
+</document>
